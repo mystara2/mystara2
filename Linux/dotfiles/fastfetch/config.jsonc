@@ -1,12 +1,11 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-	    "source": "~/.config/fastfetch/images/nyarch.png",
-	    "type": "kitty",
-	    "height": 14,
-	    "padding": {
-		    "top": 1
-	    }
+        "source": "arch5",
+        "color": {
+            "1": "#9803fc",
+            "2": "#9803fc"
+        }
     },
     "display": {
         "separator": " "
@@ -15,7 +14,8 @@
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Hardware Information──────────────────────┐"
+            "format": "┌──────────────────────Hardware Information──────────────────────┐",
+            "keyColor": "#d11f34"
         },
         {
             "type": "host",
@@ -24,70 +24,73 @@
         },
         {
             "type": "cpu",
-            "key": "│ CPU",
+            "key": "│ CPU:",
             "keyColor": "green"
         },
         {
             "type": "gpu",
-            "key": "│ Graphics",
+            "key": "│ Graphics:",
             "keyColor": "green"
         },
         {
             "type": "memory",
-            "key": "│ Memory",
+            "key": "│ Memory:",
             "keyColor": "green"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────────────────┘"
+            "format": "└────────────────────────────────────────────────────────────────┘"
         },
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Disk Information──────────────────────┐"
+            "format": "┌──────────────────────Disk Information──────────────────────┐"
         },
         {
             "type": "disk",
-            "key": "│ {name}",
-            "keyColor": "green",
+            "key": "│ {name}:",
+            "keyColor": "#06c3d4",
             "options": {
               "folders": "true"
             },
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────────────┘"
+            "format": "└────────────────────────────────────────────────────────────┘"
         },
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Network Information──────────────────────┐"
+            "format": "┌──────────────────────Network Information──────────────────────┐"
         },
         {
             "type": "localip",
-            "key": "│ Local IP",
+            "key": "│ Local IP:",
+            "keyColor": "#9606d4"
         },
         {
             "type": "publicip",
-            "key": "│ Public IP"
+            "key": "│ Public IP:",
+            "keyColor": "#e342f5"
         },
         {
             "type": "dns",
-            "key": "| DNS"
+            "key": "| DNS:",
+            "keyColor": "#9606d4"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└───────────────────────────────────────────────────────────────┘"
+            "format": "└───────────────────────────────────────────────────────────────┘"
         },
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Hyperspire Information──────────────────────┐"
+            "format": "┌──────────────────────System Information──────────────────────┐"
         },
         {
             "type": "os",
-            "key": " OS",
-            "format": "Arch Linux",
+            "key": " OS:",
+	    "format": "Arch Linux",
             "keyColor": "yellow"
         },
         {
@@ -98,52 +101,52 @@
         "break",
         {
             "type": "de",
-            "key": " Desktop Env",
+            "key": " Desktop Env:",
             "keyColor": "blue"
         },
         {
             "type": "lm",
-            "key": "│ Login Manager",
+            "key": "│ Login Manager:",
             "keyColor": "blue"
         },
         {
             "type": "wm",
-            "key": "│ WM",
+            "key": "│ WM:",
             "keyColor": "blue"
         },
         {
             "type": "wmtheme",
-            "key": "│ WM Theme",
+            "key": "│ WM Theme:",
             "keyColor": "blue"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└──────────────────────────────────────────────────────────────────┘"
+            "format": "└──────────────────────────────────────────────────────────────────┘"
         },
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌────────────────────Time & Age Information────────────────────┐"
+            "format": "┌────────────────────Time & Age Information────────────────────┐"
         },
         {
             "type": "command",
-            "key": "  OS Age ",
+            "key": "  OS Age:",
             "keyColor": "magenta",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
         {
             "type": "uptime",
-            "key": "  Uptime ",
+            "key": "  Uptime:",
             "keyColor": "magenta"
         },
         {
             "type": "datetime",
-            "key": "  DateTime ",
+            "key": "  Current Time:",
             "keyColor": "magenta"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└──────────────────────────────────────────────────────────────┘"
+            "format": "└──────────────────────────────────────────────────────────────┘"
         },
 
 //        {
